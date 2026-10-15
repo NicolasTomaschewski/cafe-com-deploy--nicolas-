@@ -43,3 +43,18 @@ def test_preco_com_desconto(client):
 def test_desconto_invalido_na_api(client):
     cafe_id = client.post("/cafes", json={"nome": "Geisha", "preco": 20}).json()["id"]
     assert client.get(f"/cafes/{cafe_id}/preco?desconto=80").status_code == 400
+
+
+def test_origem_padrao(client):
+    r = client.post("/cafes", json={"nome": "Sem Origem", "preco": 9})
+    assert r.json()["origem"] == "Não informada"
+
+
+def test_origem_informada(client):
+    r = client.post(
+        "/cafes",
+        json={"nome": "Topázio", "preco": 13, "origem": "Sul de Minas"},
+    )
+    assert r.status_code == 201
+    cafe_id = r.json()["id"]
+    assert client.get(f"/cafes/{cafe_id}").json()["origem"] == "Sul de Minas"
