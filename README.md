@@ -136,7 +136,7 @@ Versões que passaram por produção:
 | A | `4736b36` | PR [#10](https://github.com/NicolasTomaschewski/cafe-com-deploy-nicolas/pull/10): pipeline de CD e rollback |
 | B — v1.0.0 | `02398bc` | PR [#11](https://github.com/NicolasTomaschewski/cafe-com-deploy-nicolas/pull/11): selos e links |
 | C — v1.1.0 | `342b40c` | PR [#12](https://github.com/NicolasTomaschewski/cafe-com-deploy-nicolas/pull/12): Migration 3 |
-| D | XXXXXXX | Este PR (Relatório de Voo) |
+| D | `1004eea` | Este PR (Relatório de Voo) |
 
 Observações:
 
