@@ -35,7 +35,7 @@ def get(path: str):
 
 
 def ts(valor: str) -> datetime:
-    return datetime.fromisoformat(valor.replace("Z", "+00:00"))
+    return datetime.fromisoformat(valor)
 
 
 def fmt(segundos: float) -> str:
